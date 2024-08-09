@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,39 +12,86 @@
             padding: 0;
             color: #333;
         }
+
         header {
             background-color: #4CAF50;
             color: white;
             padding: 10px 0;
             text-align: center;
         }
+
         nav {
             display: flex;
             justify-content: center;
             background-color: #333;
         }
+
         nav a {
             color: white;
             padding: 14px 20px;
             text-decoration: none;
             text-align: center;
         }
+
         nav a:hover {
             background-color: #575757;
         }
+
         .container {
             padding: 20px;
         }
+
         footer {
             background-color: #f1f1f1;
             text-align: center;
-            padding: 10px 0;
-            position: fixed;
+            padding: 20px;
+            position: relative;
             width: 100%;
-            bottom: 0;
+            margin-top: 20px;
+        }
+
+        footer .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        footer .form-group {
+            margin-bottom: 15px;
+        }
+
+        footer .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        footer .form-group input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        footer .form-group input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        footer .form-group input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        footer .error {
+            color: red;
+            font-size: 0.875em;
         }
     </style>
 </head>
+
 <body>
 
     <header>
@@ -52,36 +100,47 @@
 
     <nav>
         <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
         <a href="#contact">Contact</a>
+        <a href="#about" id="aboutLink">About</a>
+        <a href="form.html" target="_blank">Form</a> <!-- Link to the form -->
     </nav>
 
     <div class="container">
         <section id="home">
             <h2>Home</h2>
-            <p>This is the home section. You can add some introductory content here.</p>
-        </section>
-
-        <section id="about">
-            <h2>About</h2>
-            <p>This section is about us. Provide information about yourself or your company here.</p>
-        </section>
-
-        <section id="services">
-            <h2>Services</h2>
-            <p>Detail the services you offer in this section. Describe what you can do for your clients.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est natus porro sed laudantium iste minima
+                consectetur, molestiae recusandae, provident sapiente optio! Sit sed laborum dicta maxime, modi suscipit
+                ut odit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, quisquam, quidem facilis odit
+                temporibus alias hic quas, quos doloremque labore illo! Eum accusantium obcaecati itaque debitis ducimus
+                distinctio minus saepe.</p>
         </section>
 
         <section id="contact">
             <h2>Contact</h2>
-            <p>Provide contact details or a contact form in this section.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias magnam quibusdam consectetur cum dolores
+                consequatur non dolorum, praesentium temporibus tempore sapiente laboriosam vero labore, culpa numquam!
+                Minus quis eveniet rerum. Lorem, ipsum.</p>
         </section>
     </div>
 
-    <footer>
+    <footer id="footer">
+        <div class="form-container">
+            <h2>About</h2>
+            <p>This section is about us. Provide information about yourself or your company here. Lorem ipsum dolor sit,
+                amet consectetur adipisicing elit. Distinctio exercitationem, nesciunt asperiores inventore voluptatum
+                veniam? Praesentium, iure alias expedita possimus inventore quisquam tempora quos nesciunt magnam
+                obcaecati provident nobis minima.</p>
+        </div>
         <p>&copy; 2024 My Homepage. All rights reserved.</p>
     </footer>
 
+    <script>
+        document.getElementById('aboutLink').addEventListener('click', function (event) {
+            event.preventDefault();
+            document.getElementById('footer').scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+
 </body>
+
 </html>
